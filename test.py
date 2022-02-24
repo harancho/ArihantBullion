@@ -1,4 +1,3 @@
-from itertools import count
 import requests
 from bs4 import BeautifulSoup
 from flask import Flask,jsonify,request
@@ -45,9 +44,6 @@ def home():
   # gold_local_dalali = int(request.form['gold_local_dalali'])
   # silver_dalali = int(request.form['silver_dalali'])
   # silver_kacchi_dalali = int(request.form['silver_kacchi_dalali'])
-  global count
-  count+=1
-  print(count)
   print("Request received")
   page1 = requests.get("https://www.moneycontrol.com/commodity/silver-price.html#04mar2022")
   page2 = requests.get("https://www.moneycontrol.com/commodity/gold-price.html#05apr2022")
