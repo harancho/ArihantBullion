@@ -36,7 +36,7 @@ def changeBadla():
 
     return jsonify(result = "Done")
 
-  return jsonify(result="Done")
+  return "Done"
 
 @app.route("/")
 def home():
