@@ -72,12 +72,12 @@ def home():
 
   return jsonify(gold_total = gold + gold_dalali_new, silver_total = silver + silver_dalali_new, gold_local_total = gold + gold_local_dalali_new, silver_kacchi_total = silver + silver_kacchi_dalali_new, gold = gold , silver = silver, gold_badla = gold_dalali_new, gold_local_badla = gold_local_dalali_new, silver_badla = silver_dalali_new, silver_kacchi_badla = silver_kacchi_dalali_new)
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
 
-def run():
-    app.run(host='0.0.0.0', port=5000)
+# def run():
+#     app.run(host='0.0.0.0', port=5000)
 
 
-t = Thread(target=run)
-t.start()
+# t = Thread(target=run)
+# t.start()
