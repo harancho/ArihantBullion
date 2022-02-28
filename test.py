@@ -16,13 +16,13 @@ silver_kacchi_dalali = 1200
 silver = 60000
 gold = 50000
 
-# con = lite.connect('site.db')
-# with con:
-# 	cur = con.cursor()
-# 	cur.execute("CREATE TABLE IF NOT EXISTS dalalis(id INTEGER PRIMARY KEY, gold_dalali INTEGER , silver_dalali INTEGER, gold_local_dalali INTEGER, silver_kacchi_dalali INTEGER)")
-# 	cur.execute("INSERT INTO dalalis (gold_dalali,silver_dalali,gold_local_dalali,silver_kacchi_dalali) VALUES (?,?,?,?) ",(gold_dalali,silver_dalali,gold_local_dalali,silver_kacchi_dalali))
-# 	cur.execute("CREATE TABLE IF NOT EXISTS prices(id INTEGER PRIMARY KEY, gold_price INTEGER , silver_price INTEGER)")
-# 	cur.execute("INSERT INTO prices (gold_price,silver_price) VALUES (?,?)",(gold,silver))
+con = lite.connect('site.db')
+with con:
+	cur = con.cursor()
+	cur.execute("CREATE TABLE IF NOT EXISTS dalalis(id INTEGER PRIMARY KEY, gold_dalali INTEGER , silver_dalali INTEGER, gold_local_dalali INTEGER, silver_kacchi_dalali INTEGER)")
+	cur.execute("INSERT INTO dalalis (gold_dalali,silver_dalali,gold_local_dalali,silver_kacchi_dalali) VALUES (?,?,?,?) ",(gold_dalali,silver_dalali,gold_local_dalali,silver_kacchi_dalali))
+	cur.execute("CREATE TABLE IF NOT EXISTS prices(id INTEGER PRIMARY KEY, gold_price INTEGER , silver_price INTEGER)")
+	cur.execute("INSERT INTO prices (gold_price,silver_price) VALUES (?,?)",(gold,silver))
 
 @app.route("/changeBadla", methods = ['GET','POST'])
 def changeBadla():
