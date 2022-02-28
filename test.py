@@ -65,7 +65,7 @@ def get_prices():
             cur.execute("INSERT INTO prices (gold_price,silver_price) VALUES (?,?)",(gold, silver))
 
 
-        time.sleep(20)
+        time.sleep(7)
 
 
 @app.route("/")
