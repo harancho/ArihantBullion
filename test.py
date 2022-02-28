@@ -90,13 +90,14 @@ def home():
 
 x = threading.Thread(target=get_prices)
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
+#     x.start()
+#     app.run()
+
+def run():
     x.start()
     app.run(host='0.0.0.0', port=5000)
 
-# def run():
-#     app.run(host='0.0.0.0', port=5000)
 
-
-# t = Thread(target=run)
-# t.start()
+t = Thread(target=run)
+t.start()
