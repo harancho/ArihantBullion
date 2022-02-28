@@ -96,7 +96,7 @@ x = threading.Thread(target=get_prices)
 
 def run():
     x.start()
-    app.run(host='0.0.0.0', port=5000)
+    app.run()
 
 
 t = Thread(target=run)
